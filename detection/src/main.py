@@ -141,11 +141,11 @@ def main():
 				break
 
 	file.loop()
-	rospy.sleep(10)
+
+if __name__ == '__main__':
 	try:
+		main()
 		rospy.spin()
 	except KeyboardInterrupt:
 		print("Shutting down")
-
-if __name__ == '__main__':
-	main()
+		exit()
